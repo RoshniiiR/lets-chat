@@ -1,0 +1,358 @@
+[debug] [2024-04-11T06:22:47.298Z] ----------------------------------------------------------------------
+[debug] [2024-04-11T06:22:47.299Z] Command:       /home/roshni-pc/.nvm/versions/node/v18.19.1/bin/node /home/roshni-pc/.nvm/versions/node/v18.19.1/bin/firebase init
+[debug] [2024-04-11T06:22:47.299Z] CLI Version:   13.7.1
+[debug] [2024-04-11T06:22:47.299Z] Platform:      linux
+[debug] [2024-04-11T06:22:47.300Z] Node Version:  v18.19.1
+[debug] [2024-04-11T06:22:47.300Z] Time:          Thu Apr 11 2024 11:52:47 GMT+0530 (India Standard Time)
+[debug] [2024-04-11T06:22:47.300Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-11T06:22:47.341Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-11T06:22:47.341Z] > authorizing via signed-in user (roshni.canopus@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/roshni-pc/Desktop/test/Angular/lets-chat
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-04-11T06:22:53.536Z] Using project from CLI flag: lets-chat-d2936
+[debug] [2024-04-11T06:22:53.537Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/lets-chat-d2936 [none]
+[debug] [2024-04-11T06:22:54.291Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/lets-chat-d2936 200
+[debug] [2024-04-11T06:22:54.291Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/lets-chat-d2936 {"projectId":"lets-chat-d2936","projectNumber":"781224036793","displayName":"lets-chat","name":"projects/lets-chat-d2936","resources":{"hostingSite":"lets-chat-d2936","realtimeDatabaseInstance":"lets-chat-d2936-default-rtdb","storageBucket":"lets-chat-d2936.appspot.com","locationId":"asia-south1"},"state":"ACTIVE","etag":"1_14852637-4812-4421-aebc-2d4125f7b381"}
+[info] i  Using project lets-chat-d2936 (lets-chat) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2024-04-11T06:22:54.296Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lets-chat-d2936/services/firebasedatabase.googleapis.com [none]
+[debug] [2024-04-11T06:22:54.296Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lets-chat-d2936/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/lets-chat-d2936
+[debug] [2024-04-11T06:22:56.149Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lets-chat-d2936/services/firebasedatabase.googleapis.com 200
+[debug] [2024-04-11T06:22:56.149Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lets-chat-d2936/services/firebasedatabase.googleapis.com [omitted]
+[info] ✔  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2024-04-11T06:22:56.150Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/lets-chat-d2936/locations/-/instances/lets-chat-d2936-default-rtdb [none]
+[debug] [2024-04-11T06:22:57.891Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/lets-chat-d2936/locations/-/instances/lets-chat-d2936-default-rtdb 200
+[debug] [2024-04-11T06:22:57.891Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/lets-chat-d2936/locations/-/instances/lets-chat-d2936-default-rtdb {"name":"projects/781224036793/locations/asia-southeast1/instances/lets-chat-d2936-default-rtdb","project":"projects/781224036793","databaseUrl":"https://lets-chat-d2936-default-rtdb.asia-southeast1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2024-04-11T06:23:01.860Z] >>> [apiv2][query] GET https://lets-chat-d2936-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json [none]
+[debug] [2024-04-11T06:23:02.083Z] <<< [apiv2][status] GET https://lets-chat-d2936-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json 200
+[debug] [2024-04-11T06:23:02.083Z] <<< [apiv2][body] GET https://lets-chat-d2936-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json [stream]
+[info] ✔  Database Rules for lets-chat-d2936-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Firestore Setup
+[debug] [2024-04-11T06:23:02.084Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lets-chat-d2936/services/firestore.googleapis.com [none]
+[debug] [2024-04-11T06:23:02.084Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lets-chat-d2936/services/firestore.googleapis.com x-goog-quota-user=projects/lets-chat-d2936
+[debug] [2024-04-11T06:23:02.716Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lets-chat-d2936/services/firestore.googleapis.com 200
+[debug] [2024-04-11T06:23:02.716Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lets-chat-d2936/services/firestore.googleapis.com [omitted]
+[debug] [2024-04-11T06:23:02.716Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/lets-chat-d2936/databases/(default) [none]
+[debug] [2024-04-11T06:23:02.968Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/lets-chat-d2936/databases/(default) 200
+[debug] [2024-04-11T06:23:02.968Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/lets-chat-d2936/databases/(default) {"name":"projects/lets-chat-d2936/databases/(default)","uid":"78cba1c9-b997-43a4-ad29-dba46adbb0df","createTime":"2024-04-11T06:17:28.085718Z","updateTime":"2024-04-11T06:17:28.085718Z","locationId":"asia-south1","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2024-04-11T06:17:28.085718Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"j","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"IM3a+f/CuYUDMJKBu5DCuYUD"}
+[debug] [2024-04-11T06:23:02.968Z] database_type: FIRESTORE_NATIVE
+[debug] [2024-04-11T06:23:02.968Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-11T06:23:02.968Z] > authorizing via signed-in user (roshni.canopus@gmail.com)
+[debug] [2024-04-11T06:23:02.968Z] [iam] checking project lets-chat-d2936 for permissions ["firebase.projects.get"]
+[debug] [2024-04-11T06:23:02.969Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/lets-chat-d2936:testIamPermissions [none]
+[debug] [2024-04-11T06:23:02.969Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/lets-chat-d2936:testIamPermissions x-goog-quota-user=projects/lets-chat-d2936
+[debug] [2024-04-11T06:23:02.969Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/lets-chat-d2936:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-04-11T06:23:03.391Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/lets-chat-d2936:testIamPermissions 200
+[debug] [2024-04-11T06:23:03.391Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/lets-chat-d2936:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-04-11T06:23:07.876Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/lets-chat-d2936/releases pageSize=10&pageToken=
+[debug] [2024-04-11T06:23:09.319Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/lets-chat-d2936/releases 200
+[debug] [2024-04-11T06:23:09.319Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/lets-chat-d2936/releases {"releases":[{"name":"projects/lets-chat-d2936/releases/cloud.firestore","rulesetName":"projects/lets-chat-d2936/rulesets/d0357804-0fc1-47d5-8707-c32428209e6f","createTime":"2024-04-11T06:17:35.485565Z","updateTime":"2024-04-11T06:17:35.485565Z"}]}
+[debug] [2024-04-11T06:23:09.319Z] Found ruleset: projects/lets-chat-d2936/rulesets/d0357804-0fc1-47d5-8707-c32428209e6f
+[debug] [2024-04-11T06:23:09.319Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/lets-chat-d2936/rulesets/d0357804-0fc1-47d5-8707-c32428209e6f [none]
+[debug] [2024-04-11T06:23:10.765Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/lets-chat-d2936/rulesets/d0357804-0fc1-47d5-8707-c32428209e6f 200
+[debug] [2024-04-11T06:23:10.765Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/lets-chat-d2936/rulesets/d0357804-0fc1-47d5-8707-c32428209e6f [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-04-11T06:23:22.204Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/lets-chat-d2936/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2024-04-11T06:23:22.205Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/lets-chat-d2936/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2024-04-11T06:23:22.403Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/lets-chat-d2936/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2024-04-11T06:23:22.403Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/lets-chat-d2936/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/lets-chat-d2936/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[debug] [2024-04-11T06:23:22.463Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/lets-chat-d2936/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2024-04-11T06:23:22.464Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/lets-chat-d2936/databases/(default)/collectionGroups/-/indexes {}
+[info] 
+=== Functions Setup
+[debug] [2024-04-11T06:23:22.464Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-11T06:23:22.464Z] > authorizing via signed-in user (roshni.canopus@gmail.com)
+[debug] [2024-04-11T06:23:22.464Z] [iam] checking project lets-chat-d2936 for permissions ["firebase.projects.get"]
+[debug] [2024-04-11T06:23:22.464Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/lets-chat-d2936:testIamPermissions [none]
+[debug] [2024-04-11T06:23:22.464Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/lets-chat-d2936:testIamPermissions x-goog-quota-user=projects/lets-chat-d2936
+[debug] [2024-04-11T06:23:22.464Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/lets-chat-d2936:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-04-11T06:23:23.135Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/lets-chat-d2936:testIamPermissions 200
+[debug] [2024-04-11T06:23:23.135Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/lets-chat-d2936:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-04-11T06:23:23.135Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lets-chat-d2936/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-04-11T06:23:23.135Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lets-chat-d2936/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/lets-chat-d2936
+[debug] [2024-04-11T06:23:23.136Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lets-chat-d2936/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-04-11T06:23:23.136Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lets-chat-d2936/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/lets-chat-d2936
+[debug] [2024-04-11T06:23:24.988Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lets-chat-d2936/services/runtimeconfig.googleapis.com 200
+[debug] [2024-04-11T06:23:24.988Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lets-chat-d2936/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-04-11T06:23:24.993Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lets-chat-d2936/services/cloudfunctions.googleapis.com 200
+[debug] [2024-04-11T06:23:24.993Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lets-chat-d2936/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] ✔  Wrote functions/package.json 
+[info] ✔  Wrote functions/.eslintrc.js 
+[info] ✔  Wrote functions/index.js 
+[info] ✔  Wrote functions/.gitignore 
+[info] 
+=== Hosting Setup
+[debug] [2024-04-11T06:23:43.104Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/lets-chat-d2936 [none]
+[debug] [2024-04-11T06:23:43.540Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/lets-chat-d2936 200
+[debug] [2024-04-11T06:23:43.540Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/lets-chat-d2936 {"projectId":"lets-chat-d2936","projectNumber":"781224036793","displayName":"lets-chat","name":"projects/lets-chat-d2936","resources":{"hostingSite":"lets-chat-d2936","realtimeDatabaseInstance":"lets-chat-d2936-default-rtdb","storageBucket":"lets-chat-d2936.appspot.com","locationId":"asia-south1"},"state":"ACTIVE","etag":"1_14852637-4812-4421-aebc-2d4125f7b381"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2024-04-11T06:23:57.388Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2024-04-11T06:23:57.546Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2024-04-11T06:23:57.546Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"10.10.0","browserURL":"https://www.gstatic.com/firebasejs/10.10.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/10.10.0/firebase.tgz"},"live":{"version":"10.10","browserURL":"https://www.gstatic.com/firebasejs/live/10.10/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/10.10/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/10.10.0/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/10.10.0/firebase-auth/cordova.js","auth/web-extension":"https://www.gstatic.com/firebasejs/10.10.0/firebase-auth/web-extension.js","functions":"https://www.gstatic.com/firebasejs/10.10.0/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/10.10.0/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/10.10.0/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/10.10.0/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/10.10.0/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/10.10.0/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/10.10.0/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.memory.js"}}
+[info] ✔  Wrote y/index.html 
+[info] 
+=== Storage Setup
+[info] 
+[info] Firebase Storage Security Rules allow you to define how and when to allow
+[info] uploads and downloads. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[info] ✔  Wrote storage.rules 
+[info] 
+=== Emulators Setup
+[info] i  firestore: downloading cloud-firestore-emulator-v1.19.4.jar... {"metadata":{"emulator":{"name":"firestore"},"message":"downloading cloud-firestore-emulator-v1.19.4.jar..."}}
+[debug] [2024-04-11T06:24:35.589Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-firestore-emulator-v1.19.4.jar 
+[debug] [2024-04-11T06:24:36.133Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-firestore-emulator-v1.19.4.jar 200
+[debug] [2024-04-11T06:24:36.134Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-firestore-emulator-v1.19.4.jar [stream]
+[info] i  database: downloading firebase-database-emulator-v4.11.2.jar... {"metadata":{"emulator":{"name":"database"},"message":"downloading firebase-database-emulator-v4.11.2.jar..."}}
+[debug] [2024-04-11T06:24:43.229Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/firebase-database-emulator-v4.11.2.jar 
+[debug] [2024-04-11T06:24:43.757Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/firebase-database-emulator-v4.11.2.jar 200
+[debug] [2024-04-11T06:24:43.757Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/firebase-database-emulator-v4.11.2.jar [stream]
+[info] i  pubsub: downloading pubsub-emulator-0.8.2.zip... {"metadata":{"emulator":{"name":"pubsub"},"message":"downloading pubsub-emulator-0.8.2.zip..."}}
+[debug] [2024-04-11T06:24:51.408Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/pubsub-emulator-0.8.2.zip 
+[debug] [2024-04-11T06:24:51.898Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/pubsub-emulator-0.8.2.zip 200
+[debug] [2024-04-11T06:24:51.898Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/pubsub-emulator-0.8.2.zip [stream]
+[debug] [2024-04-11T06:24:58.746Z] Data is 65611398
+[debug] [2024-04-11T06:24:58.746Z] [unzip] Entry: pubsub-emulator/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-04-11T06:24:58.746Z] [unzip] Processing entry: pubsub-emulator/
+[debug] [2024-04-11T06:24:58.746Z] [unzip] mkdir: /home/roshni-pc/.cache/firebase/emulators/pubsub-emulator-0.8.2/pubsub-emulator/
+[debug] [2024-04-11T06:24:58.746Z] [unzip] Entry: pubsub-emulator/bin/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-04-11T06:24:58.747Z] [unzip] Processing entry: pubsub-emulator/bin/
+[debug] [2024-04-11T06:24:58.747Z] [unzip] mkdir: /home/roshni-pc/.cache/firebase/emulators/pubsub-emulator-0.8.2/pubsub-emulator/bin/
+[debug] [2024-04-11T06:24:58.747Z] [unzip] Entry: pubsub-emulator/bin/cloud-pubsub-emulator (compressed_size=1954 bytes, uncompressed_size=5142 bytes)
+[debug] [2024-04-11T06:24:58.747Z] [unzip] Processing entry: pubsub-emulator/bin/cloud-pubsub-emulator
+[debug] [2024-04-11T06:24:58.747Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/pubsub-emulator-0.8.2/pubsub-emulator/bin
+[debug] [2024-04-11T06:24:58.747Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/pubsub-emulator-0.8.2/pubsub-emulator/bin/cloud-pubsub-emulator
+[debug] [2024-04-11T06:24:58.749Z] [unzip] Entry: pubsub-emulator/bin/cloud-pubsub-emulator.bat (compressed_size=884 bytes, uncompressed_size=2271 bytes)
+[debug] [2024-04-11T06:24:58.749Z] [unzip] Processing entry: pubsub-emulator/bin/cloud-pubsub-emulator.bat
+[debug] [2024-04-11T06:24:58.749Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/pubsub-emulator-0.8.2/pubsub-emulator/bin
+[debug] [2024-04-11T06:24:58.749Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/pubsub-emulator-0.8.2/pubsub-emulator/bin/cloud-pubsub-emulator.bat
+[debug] [2024-04-11T06:24:58.750Z] [unzip] Entry: pubsub-emulator/lib/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-04-11T06:24:58.750Z] [unzip] Processing entry: pubsub-emulator/lib/
+[debug] [2024-04-11T06:24:58.750Z] [unzip] mkdir: /home/roshni-pc/.cache/firebase/emulators/pubsub-emulator-0.8.2/pubsub-emulator/lib/
+[debug] [2024-04-11T06:24:58.750Z] [unzip] Entry: pubsub-emulator/lib/cloud-pubsub-emulator-0.8.2.jar (compressed_size=65607384 bytes, uncompressed_size=70562711 bytes)
+[debug] [2024-04-11T06:24:58.750Z] [unzip] Processing entry: pubsub-emulator/lib/cloud-pubsub-emulator-0.8.2.jar
+[debug] [2024-04-11T06:24:58.750Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/pubsub-emulator-0.8.2/pubsub-emulator/lib
+[debug] [2024-04-11T06:24:58.750Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/pubsub-emulator-0.8.2/pubsub-emulator/lib/cloud-pubsub-emulator-0.8.2.jar
+[info] i  storage: downloading cloud-storage-rules-runtime-v1.1.3.jar... {"metadata":{"emulator":{"name":"storage"},"message":"downloading cloud-storage-rules-runtime-v1.1.3.jar..."}}
+[debug] [2024-04-11T06:24:58.983Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-storage-rules-runtime-v1.1.3.jar 
+[debug] [2024-04-11T06:24:59.513Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-storage-rules-runtime-v1.1.3.jar 200
+[debug] [2024-04-11T06:24:59.513Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-storage-rules-runtime-v1.1.3.jar [stream]
+[info] i  ui: downloading ui-v1.11.8.zip... {"metadata":{"emulator":{"name":"ui"},"message":"downloading ui-v1.11.8.zip..."}}
+[debug] [2024-04-11T06:25:04.275Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.8.zip 
+[info] 
+=== Remoteconfig Setup
+[debug] [2024-04-11T06:25:04.647Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.8.zip 200
+[debug] [2024-04-11T06:25:04.647Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.8.zip [stream]
+[debug] [2024-04-11T06:25:04.876Z] Data is 3523907
+[debug] [2024-04-11T06:25:04.876Z] [unzip] Entry: client/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-04-11T06:25:04.876Z] [unzip] Processing entry: client/
+[debug] [2024-04-11T06:25:04.876Z] [unzip] mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/
+[debug] [2024-04-11T06:25:04.877Z] [unzip] Entry: client/favicon.ico (compressed_size=2497 bytes, uncompressed_size=7406 bytes)
+[debug] [2024-04-11T06:25:04.877Z] [unzip] Processing entry: client/favicon.ico
+[debug] [2024-04-11T06:25:04.877Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client
+[debug] [2024-04-11T06:25:04.878Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/favicon.ico
+[debug] [2024-04-11T06:25:04.879Z] [unzip] Entry: client/apple-touch-icon.png (compressed_size=7231 bytes, uncompressed_size=7367 bytes)
+[debug] [2024-04-11T06:25:04.879Z] [unzip] Processing entry: client/apple-touch-icon.png
+[debug] [2024-04-11T06:25:04.879Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client
+[debug] [2024-04-11T06:25:04.880Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/apple-touch-icon.png
+[debug] [2024-04-11T06:25:04.880Z] [unzip] Entry: client/android-chrome-512x512.png (compressed_size=16987 bytes, uncompressed_size=18186 bytes)
+[debug] [2024-04-11T06:25:04.880Z] [unzip] Processing entry: client/android-chrome-512x512.png
+[debug] [2024-04-11T06:25:04.880Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client
+[debug] [2024-04-11T06:25:04.880Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/android-chrome-512x512.png
+[debug] [2024-04-11T06:25:04.881Z] [unzip] Entry: client/assets/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-04-11T06:25:04.881Z] [unzip] Processing entry: client/assets/
+[debug] [2024-04-11T06:25:04.881Z] [unzip] mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/
+[debug] [2024-04-11T06:25:04.881Z] [unzip] Entry: client/assets/extensions/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-04-11T06:25:04.881Z] [unzip] Processing entry: client/assets/extensions/
+[debug] [2024-04-11T06:25:04.881Z] [unzip] mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/extensions/
+[debug] [2024-04-11T06:25:04.882Z] [unzip] Entry: client/assets/extensions/default-extension.png (compressed_size=1646 bytes, uncompressed_size=1657 bytes)
+[debug] [2024-04-11T06:25:04.882Z] [unzip] Processing entry: client/assets/extensions/default-extension.png
+[debug] [2024-04-11T06:25:04.882Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/extensions
+[debug] [2024-04-11T06:25:04.882Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/extensions/default-extension.png
+[debug] [2024-04-11T06:25:04.882Z] [unzip] Entry: client/assets/index-Z4-ilXvq.js.map (compressed_size=2229704 bytes, uncompressed_size=9599487 bytes)
+[debug] [2024-04-11T06:25:04.882Z] [unzip] Processing entry: client/assets/index-Z4-ilXvq.js.map
+[debug] [2024-04-11T06:25:04.883Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets
+[debug] [2024-04-11T06:25:04.883Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/index-Z4-ilXvq.js.map
+[debug] [2024-04-11T06:25:04.907Z] [unzip] Entry: client/assets/provider-icons/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-04-11T06:25:04.907Z] [unzip] Processing entry: client/assets/provider-icons/
+[debug] [2024-04-11T06:25:04.907Z] [unzip] mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons/
+[debug] [2024-04-11T06:25:04.908Z] [unzip] Entry: client/assets/provider-icons/auth_service_oidc.svg (compressed_size=414 bytes, uncompressed_size=858 bytes)
+[debug] [2024-04-11T06:25:04.908Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_oidc.svg
+[debug] [2024-04-11T06:25:04.908Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons
+[debug] [2024-04-11T06:25:04.908Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons/auth_service_oidc.svg
+[debug] [2024-04-11T06:25:04.909Z] [unzip] Entry: client/assets/provider-icons/auth_service_yahoo.svg (compressed_size=577 bytes, uncompressed_size=1182 bytes)
+[debug] [2024-04-11T06:25:04.909Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_yahoo.svg
+[debug] [2024-04-11T06:25:04.909Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons
+[debug] [2024-04-11T06:25:04.909Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons/auth_service_yahoo.svg
+[debug] [2024-04-11T06:25:04.910Z] [unzip] Entry: client/assets/provider-icons/auth_service_phone.svg (compressed_size=261 bytes, uncompressed_size=414 bytes)
+[debug] [2024-04-11T06:25:04.910Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_phone.svg
+[debug] [2024-04-11T06:25:04.910Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons
+[debug] [2024-04-11T06:25:04.910Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons/auth_service_phone.svg
+[debug] [2024-04-11T06:25:04.911Z] [unzip] Entry: client/assets/provider-icons/auth_service_saml.svg (compressed_size=575 bytes, uncompressed_size=1226 bytes)
+[debug] [2024-04-11T06:25:04.911Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_saml.svg
+[debug] [2024-04-11T06:25:04.911Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons
+[debug] [2024-04-11T06:25:04.911Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons/auth_service_saml.svg
+[debug] [2024-04-11T06:25:04.912Z] [unzip] Entry: client/assets/provider-icons/auth_service_mslive.svg (compressed_size=203 bytes, uncompressed_size=378 bytes)
+[debug] [2024-04-11T06:25:04.912Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_mslive.svg
+[debug] [2024-04-11T06:25:04.912Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons
+[debug] [2024-04-11T06:25:04.912Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons/auth_service_mslive.svg
+[debug] [2024-04-11T06:25:04.913Z] [unzip] Entry: client/assets/provider-icons/auth_service_facebook.svg (compressed_size=289 bytes, uncompressed_size=457 bytes)
+[debug] [2024-04-11T06:25:04.913Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_facebook.svg
+[debug] [2024-04-11T06:25:04.913Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons
+[debug] [2024-04-11T06:25:04.913Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons/auth_service_facebook.svg
+[debug] [2024-04-11T06:25:04.914Z] [unzip] Entry: client/assets/provider-icons/auth_service_play_games.svg (compressed_size=565 bytes, uncompressed_size=1173 bytes)
+[debug] [2024-04-11T06:25:04.914Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_play_games.svg
+[debug] [2024-04-11T06:25:04.914Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons
+[debug] [2024-04-11T06:25:04.914Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons/auth_service_play_games.svg
+[debug] [2024-04-11T06:25:04.915Z] [unzip] Entry: client/assets/provider-icons/auth_service_github.svg (compressed_size=466 bytes, uncompressed_size=838 bytes)
+[debug] [2024-04-11T06:25:04.915Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_github.svg
+[debug] [2024-04-11T06:25:04.915Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons
+[debug] [2024-04-11T06:25:04.916Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons/auth_service_github.svg
+[debug] [2024-04-11T06:25:04.916Z] [unzip] Entry: client/assets/provider-icons/auth_service_apple.svg (compressed_size=230 bytes, uncompressed_size=334 bytes)
+[debug] [2024-04-11T06:25:04.916Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_apple.svg
+[debug] [2024-04-11T06:25:04.916Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons
+[debug] [2024-04-11T06:25:04.917Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons/auth_service_apple.svg
+[debug] [2024-04-11T06:25:04.918Z] [unzip] Entry: client/assets/provider-icons/auth_service_google.svg (compressed_size=409 bytes, uncompressed_size=720 bytes)
+[debug] [2024-04-11T06:25:04.918Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_google.svg
+[debug] [2024-04-11T06:25:04.918Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons
+[debug] [2024-04-11T06:25:04.918Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons/auth_service_google.svg
+[debug] [2024-04-11T06:25:04.921Z] [unzip] Entry: client/assets/provider-icons/auth_service_email.svg (compressed_size=228 bytes, uncompressed_size=326 bytes)
+[debug] [2024-04-11T06:25:04.921Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_email.svg
+[debug] [2024-04-11T06:25:04.921Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons
+[debug] [2024-04-11T06:25:04.921Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons/auth_service_email.svg
+[debug] [2024-04-11T06:25:04.922Z] [unzip] Entry: client/assets/provider-icons/auth_service_twitter.svg (compressed_size=444 bytes, uncompressed_size=751 bytes)
+[debug] [2024-04-11T06:25:04.922Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_twitter.svg
+[debug] [2024-04-11T06:25:04.922Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons
+[debug] [2024-04-11T06:25:04.922Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons/auth_service_twitter.svg
+[debug] [2024-04-11T06:25:04.922Z] [unzip] Entry: client/assets/provider-icons/auth_service_game_center.svg (compressed_size=991 bytes, uncompressed_size=3921 bytes)
+[debug] [2024-04-11T06:25:04.922Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_game_center.svg
+[debug] [2024-04-11T06:25:04.922Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons
+[debug] [2024-04-11T06:25:04.922Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/provider-icons/auth_service_game_center.svg
+[debug] [2024-04-11T06:25:04.922Z] [unzip] Entry: client/assets/img/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-04-11T06:25:04.923Z] [unzip] Processing entry: client/assets/img/
+[debug] [2024-04-11T06:25:04.923Z] [unzip] mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/img/
+[debug] [2024-04-11T06:25:04.923Z] [unzip] Entry: client/assets/img/database.png (compressed_size=29449 bytes, uncompressed_size=29988 bytes)
+[debug] [2024-04-11T06:25:04.923Z] [unzip] Processing entry: client/assets/img/database.png
+[debug] [2024-04-11T06:25:04.923Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/img
+[debug] [2024-04-11T06:25:04.923Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/img/database.png
+[debug] [2024-04-11T06:25:04.923Z] [unzip] Entry: client/assets/index-Cj5I7867.css (compressed_size=35786 bytes, uncompressed_size=297937 bytes)
+[debug] [2024-04-11T06:25:04.923Z] [unzip] Processing entry: client/assets/index-Cj5I7867.css
+[debug] [2024-04-11T06:25:04.923Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets
+[debug] [2024-04-11T06:25:04.923Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/index-Cj5I7867.css
+[debug] [2024-04-11T06:25:04.924Z] [unzip] Entry: client/assets/index-Z4-ilXvq.js (compressed_size=563876 bytes, uncompressed_size=2021818 bytes)
+[debug] [2024-04-11T06:25:04.924Z] [unzip] Processing entry: client/assets/index-Z4-ilXvq.js
+[debug] [2024-04-11T06:25:04.924Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets
+[debug] [2024-04-11T06:25:04.924Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/assets/index-Z4-ilXvq.js
+[debug] [2024-04-11T06:25:04.929Z] [unzip] Entry: client/safari-pinned-tab.svg (compressed_size=838 bytes, uncompressed_size=1504 bytes)
+[debug] [2024-04-11T06:25:04.929Z] [unzip] Processing entry: client/safari-pinned-tab.svg
+[debug] [2024-04-11T06:25:04.929Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client
+[debug] [2024-04-11T06:25:04.929Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/safari-pinned-tab.svg
+[debug] [2024-04-11T06:25:04.929Z] [unzip] Entry: client/mstile-150x150.png (compressed_size=5406 bytes, uncompressed_size=5723 bytes)
+[debug] [2024-04-11T06:25:04.929Z] [unzip] Processing entry: client/mstile-150x150.png
+[debug] [2024-04-11T06:25:04.929Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client
+[debug] [2024-04-11T06:25:04.929Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/mstile-150x150.png
+[debug] [2024-04-11T06:25:04.930Z] [unzip] Entry: client/browserconfig.xml (compressed_size=491 bytes, uncompressed_size=822 bytes)
+[debug] [2024-04-11T06:25:04.930Z] [unzip] Processing entry: client/browserconfig.xml
+[debug] [2024-04-11T06:25:04.930Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client
+[debug] [2024-04-11T06:25:04.930Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/browserconfig.xml
+[debug] [2024-04-11T06:25:04.930Z] [unzip] Entry: client/robots.txt (compressed_size=26 bytes, uncompressed_size=26 bytes)
+[debug] [2024-04-11T06:25:04.930Z] [unzip] Processing entry: client/robots.txt
+[debug] [2024-04-11T06:25:04.930Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client
+[debug] [2024-04-11T06:25:04.930Z] [unzip] Writing file: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/robots.txt
+[debug] [2024-04-11T06:25:04.930Z] [unzip] Entry: client/index.html (compressed_size=1365 bytes, uncompressed_size=3071 bytes)
+[debug] [2024-04-11T06:25:04.931Z] [unzip] Processing entry: client/index.html
+[debug] [2024-04-11T06:25:04.931Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client
+[debug] [2024-04-11T06:25:04.931Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/index.html
+[debug] [2024-04-11T06:25:04.931Z] [unzip] Entry: client/favicon-16x16.png (compressed_size=757 bytes, uncompressed_size=777 bytes)
+[debug] [2024-04-11T06:25:04.931Z] [unzip] Processing entry: client/favicon-16x16.png
+[debug] [2024-04-11T06:25:04.931Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client
+[debug] [2024-04-11T06:25:04.931Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/favicon-16x16.png
+[debug] [2024-04-11T06:25:04.931Z] [unzip] Entry: client/manifest.json (compressed_size=246 bytes, uncompressed_size=551 bytes)
+[debug] [2024-04-11T06:25:04.931Z] [unzip] Processing entry: client/manifest.json
+[debug] [2024-04-11T06:25:04.931Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client
+[debug] [2024-04-11T06:25:04.931Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/manifest.json
+[debug] [2024-04-11T06:25:04.932Z] [unzip] Entry: client/favicon-32x32.png (compressed_size=1175 bytes, uncompressed_size=1175 bytes)
+[debug] [2024-04-11T06:25:04.932Z] [unzip] Processing entry: client/favicon-32x32.png
+[debug] [2024-04-11T06:25:04.932Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client
+[debug] [2024-04-11T06:25:04.932Z] [unzip] Writing file: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/favicon-32x32.png
+[debug] [2024-04-11T06:25:04.932Z] [unzip] Entry: client/android-chrome-192x192.png (compressed_size=7602 bytes, uncompressed_size=7834 bytes)
+[debug] [2024-04-11T06:25:04.932Z] [unzip] Processing entry: client/android-chrome-192x192.png
+[debug] [2024-04-11T06:25:04.932Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client
+[debug] [2024-04-11T06:25:04.932Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/client/android-chrome-192x192.png
+[debug] [2024-04-11T06:25:04.932Z] [unzip] Entry: server/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-04-11T06:25:04.932Z] [unzip] Processing entry: server/
+[debug] [2024-04-11T06:25:04.932Z] [unzip] mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/server/
+[debug] [2024-04-11T06:25:04.932Z] [unzip] Entry: server/server.mjs (compressed_size=311497 bytes, uncompressed_size=1147307 bytes)
+[debug] [2024-04-11T06:25:04.933Z] [unzip] Processing entry: server/server.mjs
+[debug] [2024-04-11T06:25:04.933Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/server
+[debug] [2024-04-11T06:25:04.933Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/server/server.mjs
+[debug] [2024-04-11T06:25:04.935Z] [unzip] Entry: server/assets/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-04-11T06:25:04.935Z] [unzip] Processing entry: server/assets/
+[debug] [2024-04-11T06:25:04.935Z] [unzip] mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/server/assets/
+[debug] [2024-04-11T06:25:04.935Z] [unzip] Entry: server/assets/multipart-parser-n20ATYm_.mjs.map (compressed_size=4790 bytes, uncompressed_size=17920 bytes)
+[debug] [2024-04-11T06:25:04.935Z] [unzip] Processing entry: server/assets/multipart-parser-n20ATYm_.mjs.map
+[debug] [2024-04-11T06:25:04.935Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/server/assets
+[debug] [2024-04-11T06:25:04.935Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/server/assets/multipart-parser-n20ATYm_.mjs.map
+[debug] [2024-04-11T06:25:04.936Z] [unzip] Entry: server/assets/multipart-parser-n20ATYm_.mjs (compressed_size=2625 bytes, uncompressed_size=10428 bytes)
+[debug] [2024-04-11T06:25:04.936Z] [unzip] Processing entry: server/assets/multipart-parser-n20ATYm_.mjs
+[debug] [2024-04-11T06:25:04.936Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/server/assets
+[debug] [2024-04-11T06:25:04.936Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/server/assets/multipart-parser-n20ATYm_.mjs
+[debug] [2024-04-11T06:25:04.936Z] [unzip] Entry: server/server.mjs.map (compressed_size=286219 bytes, uncompressed_size=1310517 bytes)
+[debug] [2024-04-11T06:25:04.936Z] [unzip] Processing entry: server/server.mjs.map
+[debug] [2024-04-11T06:25:04.936Z] [unzip] else mkdir: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/server
+[debug] [2024-04-11T06:25:04.936Z] [unzip] deflating: /home/roshni-pc/.cache/firebase/emulators/ui-v1.11.8/server/server.mjs.map
